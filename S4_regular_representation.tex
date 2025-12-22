@@ -1,0 +1,464 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+
+\begin{document}
+
+\title{Regular Representation of $S_4$}
+\author{}
+\date{}
+\maketitle
+
+\section*{Introduction}
+The regular representation of $S_4$ (symmetric group on 4 elements) consists of 24 permutation matrices of size $24 \times 24$, each corresponding to an element of the group.
+
+\section*{Matrix Notation}
+Each matrix $M_g$ for $g \in S_4$ acts on the vector space with basis indexed by group elements. The entry $M_g(i,j) = 1$ if $g \cdot h_i = h_j$, where $h_i, h_j$ are group elements in some fixed order.
+
+\section*{Matrix Patterns (First 6 rows and columns shown)}
+
+\subsection*{Matrix 1}
+% Matrix 1
+\[
+\begin{pmatrix}
+  1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 1 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 1 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 1 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 1 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 1 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (1, 2, 3, 4, 5, 6, 7, 8, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 2}
+% Matrix 2
+\[
+\begin{pmatrix}
+  0 & 1 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 1 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (2, 3, 12, 14, 15, 24, 13, 7, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 3}
+% Matrix 3
+\[
+\begin{pmatrix}
+  0 & 0 & 1 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (3, 12, 1, 19, 16, 17, 18, 13, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 4}
+% Matrix 4
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 1 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 1 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 1 & \cdots \\
+  1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 1 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 1 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (4, 5, 6, 1, 2, 3, 12, 14, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 5}
+% Matrix 5
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 1 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 1 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (5, 6, 7, 8, 9, 10, 11, 12, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 6}
+% Matrix 6
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 1 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 1 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (6, 7, 4, 22, 23, 20, 21, 11, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 7}
+% Matrix 7
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 1 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 1 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (7, 4, 5, 15, 24, 13, 14, 21, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 8}
+% Matrix 8
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 1 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 1 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (8, 9, 10, 5, 6, 7, 4, 22, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 9}
+% Matrix 9
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 1 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (9, 10, 11, 12, 1, 2, 3, 4, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 10}
+% Matrix 10
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (10, 11, 8, 18, 19, 16, 17, 3, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 11}
+% Matrix 11
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (11, 8, 9, 23, 20, 21, 22, 17, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 12}
+% Matrix 12
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 1 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (12, 1, 2, 9, 10, 11, 8, 18, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 13}
+% Matrix 13
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (13, 14, 15, 16, 17, 18, 19, 20, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 14}
+% Matrix 14
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 1 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 1 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (14, 15, 24, 2, 3, 12, 1, 19, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 15}
+% Matrix 15
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 1 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 1 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (15, 24, 13, 7, 4, 5, 6, 1, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 16}
+% Matrix 16
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (16, 17, 18, 13, 14, 15, 24, 2, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 17}
+% Matrix 17
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (17, 18, 19, 20, 21, 22, 23, 24, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 18}
+% Matrix 18
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (18, 19, 16, 10, 11, 8, 9, 23, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 19}
+% Matrix 19
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 1 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (19, 16, 17, 3, 12, 1, 2, 9, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 20}
+% Matrix 20
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (20, 21, 22, 17, 18, 19, 16, 10, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 21}
+% Matrix 21
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (21, 22, 23, 24, 13, 14, 15, 16, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 22}
+% Matrix 22
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 1 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 1 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (22, 23, 20, 6, 7, 4, 5, 15, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 23}
+% Matrix 23
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (23, 20, 21, 11, 8, 9, 10, 5, \ldots)
+\]
+\vspace{0.5em}
+
+\subsection*{Matrix 24}
+% Matrix 24
+\[
+\begin{pmatrix}
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+  0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
+\[
+\text{Pattern: } \sigma = (24, 13, 14, 21, 22, 23, 20, 6, \ldots)
+\]
+\vspace{0.5em}
+
+\section*{Notes}
+
+\begin{itemize}
+\item Each matrix is $24 \times 24$ (size of $S_4$)
+\item Only first 6 rows and columns are shown for readability
+\item Each row contains exactly one $1$ and 23 zeros
+\item Each column contains exactly one $1$ and 23 zeros
+\item The pattern shows the permutation of basis elements
+\end{itemize}
+
+\end{document}

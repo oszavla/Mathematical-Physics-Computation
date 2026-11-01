@@ -1,14 +1,33 @@
 
 #!/usr/bin/env python
 
+import sys
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator
 
-from sympy import lambdify, integrate, oo
-from sympy.abc import r, theta, phi
-from sympy.physics.hydrogen import R_nl, Psi_nlm
+try:
+    import sympy
+    from sympy import lambdify, integrate, oo
+    from sympy.abc import r, theta, phi
+    from sympy.physics.hydrogen import R_nl, Psi_nlm  # type: ignore[import-not-found]
+except ModuleNotFoundError as exc:
+    raise ImportError(
+        "SymPy is not installed in the active Python environment. "
+        f"Python executable: {sys.executable}. "
+        "Activate the correct venv or run: "
+        f"'{sys.executable} -m pip install sympy'"
+    ) from exc
+except ImportError as exc:
+    sympy_file = getattr(sympy, "__file__", "unknown")
+    raise ImportError(
+        "SymPy is installed, but its hydrogen API is unavailable in this version. "
+        f"Detected SymPy at: {sympy_file}. "
+        f"Python executable: {sys.executable}. "
+        "Use a compatible SymPy version (for example: "
+        f"'{sys.executable} -m pip install -U sympy')"
+    ) from exc
 
 plt.style.use('dark_background')
 mpl.rcParams['mathtext.fontset'] = 'cm'
@@ -133,7 +152,7 @@ if __name__ == "__main__":
             fontsize='xx-large',
             ha='left', va='top', transform=fig.transFigure, color='w')
 
-    # fig.text(0.00, 0.64,  "NOTE:\n\t1. The distance between two major ticks in the plot is $5\,a_0$,\n\t2. The number in the braces are the three quantum numbers $(n, l, m)$",
+    # fig.text(0.00, 0.64,  r"NOTE:\n\t1. The distance between two major ticks in the plot is $5\,a_0$,\n\t2. The number in the braces are the three quantum numbers $(n, l, m)$",
     #         fontsize='small',
     #         linespacing=1.8,
     #         ha='left', va='top', transform=fig.transFigure, color='w')
@@ -142,7 +161,10 @@ if __name__ == "__main__":
             fontsize='small',
             ha='left', va='top', transform=fig.transFigure, color='w')
 
-    fig.text(0.00, 0.59,  "    1. The distance between two major ticks in the plot is $5\,a_0$.\n    2. The numbers in the brace are the three quantum numbers $(n,\,l,\,m).$",
+    fig.text(0.00, 0.59,  (
+        "    1. The distance between two major ticks in the plot is $5\\,a_0$.\n"
+        "    2. The numbers in the brace are the three quantum numbers $(n,\\,l,\\,m).$"
+    ),
             fontsize='small',
             linespacing=1.5,
             ha='left', va='top', transform=fig.transFigure, color='w')
